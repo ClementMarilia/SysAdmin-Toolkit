@@ -1,0 +1,15 @@
+{
+  "app.title": "SysAdmin Toolkit",
+  "app.subtitle": "Ferramentas profissionais para administração Windows",
+  "menu.dashboard": "Dashboard",
+  "menu.server": "Servidor",
+  "menu.network": "Rede",
+  "menu.services": "Serviços",
+  "menu.storage": "Armazenamento",
+  "menu.eventViewer": "Visualizador de Eventos",
+  "menu.tools": "Ferramentas",
+  "dashboard.title": "Dashboard",
+  "dashboard.subtitle": "Visão geral da saúde do servidor",
+  "action.refresh": "Atualizar",
+  "status.ready": "Pronto"
+}
