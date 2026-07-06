@@ -1,0 +1,116 @@
+<Window x:Class="SysAdminToolkit.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SysAdmin Toolkit"
+        Height="760"
+        Width="1180"
+        MinHeight="680"
+        MinWidth="1024"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrushBackground}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="{StaticResource BrushSidebar}" Padding="20">
+            <DockPanel LastChildFill="True">
+                <StackPanel DockPanel.Dock="Top">
+                    <TextBlock Text="SysAdmin Toolkit" FontSize="24" FontWeight="Bold" />
+                    <TextBlock Text="Professional Windows Administration Toolkit" Foreground="{StaticResource BrushTextSecondary}" TextWrapping="Wrap" Margin="0,4,0,24" />
+
+                    <TextBlock Text="Language" Foreground="{StaticResource BrushTextSecondary}" Margin="0,0,0,6" />
+                    <ComboBox SelectedValue="{Binding CurrentLanguage, Mode=TwoWay}" SelectedValuePath="Tag" Margin="0,0,0,20">
+                        <ComboBoxItem Content="Italiano" Tag="it" />
+                        <ComboBoxItem Content="Português" Tag="pt" />
+                        <ComboBoxItem Content="English" Tag="en" />
+                        <ComboBoxItem Content="Español" Tag="es" />
+                    </ComboBox>
+
+                    <Button Content="Dashboard" />
+                    <Button Content="Server" />
+                    <Button Content="Network" />
+                    <Button Content="Services" />
+                    <Button Content="Storage" />
+                    <Button Content="Event Viewer" />
+                    <Button Content="Tools" />
+                </StackPanel>
+
+                <TextBlock DockPanel.Dock="Bottom" Text="v0.1.0" Foreground="{StaticResource BrushTextSecondary}" />
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Column="1" Margin="24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="72" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="32" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="18">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <TextBlock Text="Dashboard" FontSize="24" FontWeight="Bold" />
+                        <TextBlock Text="Server health overview" Foreground="{StaticResource BrushTextSecondary}" />
+                    </StackPanel>
+
+                    <TextBox Grid.Column="1" Text="Search..." Background="#111827" Foreground="{StaticResource BrushTextSecondary}" BorderBrush="#374151" Padding="10" />
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1" Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <UniformGrid Grid.Row="0" Columns="4" Rows="1" Margin="0,0,0,20">
+                    <Border Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="16" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Hostname" Foreground="{StaticResource BrushTextSecondary}" />
+                            <TextBlock Text="{Binding Dashboard.Hostname}" FontSize="22" FontWeight="Bold" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="16" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Windows" Foreground="{StaticResource BrushTextSecondary}" />
+                            <TextBlock Text="{Binding Dashboard.WindowsVersion}" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="16" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Uptime" Foreground="{StaticResource BrushTextSecondary}" />
+                            <TextBlock Text="{Binding Dashboard.Uptime}" FontSize="22" FontWeight="Bold" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="16">
+                        <StackPanel>
+                            <TextBlock Text="Health" Foreground="{StaticResource BrushTextSecondary}" />
+                            <TextBlock Text="{Binding Dashboard.Health}" FontSize="22" FontWeight="Bold" Foreground="{StaticResource BrushAccent}" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+
+                <Border Grid.Row="1" Background="{StaticResource BrushPanel}" CornerRadius="12" Padding="20">
+                    <StackPanel>
+                        <TextBlock Text="System details" FontSize="20" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Dashboard.Domain}" Foreground="{StaticResource BrushTextSecondary}" Margin="0,14,0,0" />
+                        <TextBlock Text="{Binding Dashboard.IpAddress}" Foreground="{StaticResource BrushTextSecondary}" Margin="0,8,0,0" />
+                        <Button Content="Refresh" Width="120" HorizontalAlignment="Left" Margin="0,20,0,0" Command="{Binding RefreshCommand}" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <TextBlock Grid.Row="2" Text="{Binding StatusMessage}" Foreground="{StaticResource BrushTextSecondary}" VerticalAlignment="Center" />
+        </Grid>
+    </Grid>
+</Window>
