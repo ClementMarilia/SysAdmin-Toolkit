@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysAdminToolkit.App", "SysAdminToolkit.App\SysAdminToolkit.App.csproj", "{8B024496-9A28-4CB9-9BC1-27924E82346E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysAdminToolkit.Core", "SysAdminToolkit.Core\SysAdminToolkit.Core.csproj", "{D4C38634-1F24-4F55-980E-3925B6BCB2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysAdminToolkit.Contracts", "SysAdminToolkit.Contracts\SysAdminToolkit.Contracts.csproj", "{C3284541-19E9-463C-B01E-5D8C6F20C119}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B024496-9A28-4CB9-9BC1-27924E82346E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B024496-9A28-4CB9-9BC1-27924E82346E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B024496-9A28-4CB9-9BC1-27924E82346E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B024496-9A28-4CB9-9BC1-27924E82346E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C38634-1F24-4F55-980E-3925B6BCB2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C38634-1F24-4F55-980E-3925B6BCB2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C38634-1F24-4F55-980E-3925B6BCB2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C38634-1F24-4F55-980E-3925B6BCB2E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3284541-19E9-463C-B01E-5D8C6F20C119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3284541-19E9-463C-B01E-5D8C6F20C119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3284541-19E9-463C-B01E-5D8C6F20C119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3284541-19E9-463C-B01E-5D8C6F20C119}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
