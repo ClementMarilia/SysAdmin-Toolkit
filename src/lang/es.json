@@ -1,0 +1,23 @@
+{
+  "app_title": "SysAdmin Toolkit",
+  "dashboard": "Panel",
+  "server_info": "Información del Servidor",
+  "services": "Servicios",
+  "network": "Red",
+  "dns": "DNS",
+  "storage": "Almacenamiento",
+  "event_viewer": "Visor de Eventos",
+  "running_services": "Servicios en ejecución",
+  "stopped_services": "Servicios detenidos",
+  "ip_configuration": "Configuración IP",
+  "internet_test": "Prueba de Internet",
+  "dns_test": "Prueba DNS",
+  "disk_usage": "Uso de disco",
+  "system_errors": "Últimos errores del sistema",
+  "export_txt": "Exportar TXT",
+  "clear": "Limpiar",
+  "language": "Idioma",
+  "executing": "Ejecutando",
+  "completed": "Completado",
+  "error": "Error"
+}
